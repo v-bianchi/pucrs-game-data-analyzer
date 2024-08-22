@@ -65,16 +65,16 @@ class SteamGameData:
       else:
         return top_years
 
-  def linux_games_percent(self):
-    """Quantos % dos jogos rodam no sistema operacional Linux
+  def linux_russian_games_percent(self):
+    """Quantos % dos jogos disponíveis em língua russa rodam no sistema operacional Linux
 
     Returns:
         float: porcentagem da quantidade total de jogos
     """
     with open(self._file_path, 'r') as file:
       reader =  csv.DictReader(file)
-      linux_games_count = 0
+      games_count = 0
       for row in reader:
-        if row['Linux'] == 'True':
-          linux_games_count += 1
-      return self._games_percent(linux_games_count)
+        if row['Linux'] == 'True' and 'Russian' in row['Supported languages']:
+          games_count += 1
+      return self._games_percent(games_count)
