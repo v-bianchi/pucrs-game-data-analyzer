@@ -1,11 +1,7 @@
-from os.path import dirname, join
 
 from game_data_analyzer.datasets.steam_game_data import SteamGameData
 
-current_path = dirname(__file__)
-games_csv_file_path = join(current_path, '..', 'game_data_analyzer', 'datasets', 'data', 'steam_games.csv')
-
-games = SteamGameData(games_csv_file_path)
+games = SteamGameData()
 
 print('Pergunta 1: Qual o percentual de jogos gratuitos e pagos na plataforma?')
 answer1 = games.free_paid_games_percent()

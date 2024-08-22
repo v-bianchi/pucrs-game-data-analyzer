@@ -1,8 +1,12 @@
 import csv
+from os.path import dirname, join
+
+current_path = dirname(__file__)
 
 class SteamGameData:
-  def __init__(self, file_path):
-    self._file_path = file_path
+  def __init__(self, use_sample_data=False):
+    filename = 'steam_games_sample.csv' if use_sample_data else 'steam_games.csv'
+    self._file_path = join(current_path, 'data', filename)
 
     with open(self._file_path, 'r') as file:
       reader =  csv.reader(file)
