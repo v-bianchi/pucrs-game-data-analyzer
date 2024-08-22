@@ -1,10 +1,10 @@
 
 from game_data_analyzer.datasets.steam_game_data import SteamGameData
 
-games = SteamGameData()
+games = SteamGameData(use_sample_data=True)
 
 print('##########################################')
-print('#      Conjunto de dados completo        #')
+print('#          Amostra de 20 jogos           #')
 print('##########################################')
 print('\n')
 
