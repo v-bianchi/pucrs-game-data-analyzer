@@ -21,6 +21,6 @@ else:
   print(f'Resposta: o ano no qual se lançaram mais jogos foi {answer2}')
 print('\n')
 
-print('Pergunta 1: Qual o percentual de jogos disponíveis em língua russa compatíveis com Linux na plataforma?')
+print('Pergunta 3: Qual o percentual de jogos disponíveis em língua russa compatíveis com Linux na plataforma?')
 answer3 = games.linux_russian_games_percent()
 print(f'Resposta: {answer3: .2f}% dos jogos disponíveis em russo rodam em Linux\n')
